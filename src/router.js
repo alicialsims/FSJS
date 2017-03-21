@@ -8,13 +8,15 @@ const Comment = require('./models/Comment');
 
 // READ
 router.get('/', (req,res, next)=>{
+	console.log('is there a prob in get');
 	Comment.find({}, function(err, Comment){
 		if(err){
 			return res.status(500).json({message: err.message});
 			return console.log(err);
 		}else{
 			// not sure what referencing in video...
-			//res.json({todos: todos});
+			return res.render('index', { title: 'Home' });
+			
 		}
 	});
 	console.log("Get Request working!");

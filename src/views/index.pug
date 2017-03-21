@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	.main.container
+		h1 This is a test
+		form(method='POST' action='/')
+			div.form-group
+				label(for='name') Name
+				input.form-control(type='text' id='name' placeholder='name' name='name')
+			div.form-group
+				label(for='email') Email
+				input.form-control(type='text' id='email' placeholder='email' name='email')
+			div.form-group
+				label(for='comment') Your Comment
+				input.form-control(type='text' id='text' name='text')
+			button.btn.btn-primary(type='submit') Submit
